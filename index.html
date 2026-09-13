@@ -588,6 +588,90 @@ svg.chart-svg{width:100%;height:auto;display:block;overflow:visible}
 .sup-alt-row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13.4px;color:var(--text-2)}
 .sup-alt-row small{color:var(--text-4)}
 @media(max-width:760px){.money-hero{padding:18px}.mh-value{font-size:31px}.boost-live img{display:none}}
+/* ============ PRONOUNS, BANNER, MUSIC, DRAWING ============ */
+.pronouns{font-size:12.5px;font-weight:500;color:var(--text-3);border:1px solid var(--border-2);border-radius:99px;padding:2px 10px;vertical-align:middle}
+.banner-preview{height:130px;border-radius:var(--r);border:1px solid var(--border);background-size:cover;background-position:center;display:grid;place-items:center;color:var(--text-4);font-size:12.5px;overflow:hidden}
+.profile-themed .coverblock.has-banner::after{background:linear-gradient(180deg,rgba(6,6,10,.05) 30%,rgba(6,6,10,.6))}
+.pl-load,.pl-gone{font-size:12.5px;color:var(--text-4);padding:8px 4px;display:block}
+.player{display:flex;align-items:center;gap:13px;padding:12px 14px;border:1px solid var(--border);border-radius:var(--r);background:var(--bg-3);transition:border-color .25s var(--ease)}
+.player.playing{border-color:var(--accent-line);background:var(--accent-dim)}
+.pl-play{width:40px;height:40px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--accent);color:#0a0a0e;transition:transform .22s var(--spring)}
+.pl-play:hover{transform:scale(1.08)}
+.pl-mid{flex:1;min-width:0}
+.pl-mid b{display:block;font-size:13.4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pl-bar{height:6px;border-radius:99px;background:var(--card-3);margin-top:8px;cursor:pointer;overflow:hidden}
+.pl-bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .18s linear}
+.pl-time{font-size:11.5px;color:var(--text-4);flex:none;font-variant-numeric:tabular-nums}
+.dropzone{position:fixed;inset:0;z-index:300;display:none;place-items:center;background:rgba(6,6,10,.72);backdrop-filter:blur(4px)}
+.dropzone.on{display:grid}
+.dz-inner{display:flex;flex-direction:column;align-items:center;gap:10px;padding:44px 54px;border:2px dashed var(--accent-line);border-radius:var(--r-xl);background:var(--bg-2);color:var(--text-2);text-align:center}
+.dz-inner svg{color:var(--accent-2)}
+.dz-inner b{font-size:17px;color:var(--text)}
+.dz-inner span{font-size:12.8px;color:var(--text-3);max-width:340px}
+.draw-tools{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.draw-swatches,.draw-sizes{display:flex;gap:7px;align-items:center}
+.dsw{width:28px;height:28px;border-radius:9px;border:2px solid transparent;transition:.18s var(--ease)}
+.dsw.on{border-color:var(--text);transform:scale(1.08)}
+.dsz{width:34px;height:34px;border-radius:9px;border:1px solid var(--border);display:grid;place-items:center;background:var(--card-2)}
+.dsz span{display:block;border-radius:50%;background:var(--text-2)}
+.dsz.on{border-color:var(--accent-line);background:var(--accent-dim)}
+.draw-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:#101017}
+#draw-canvas{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}
+@media(max-width:620px){.draw-tools{gap:7px}.dsz,.dsw{width:26px;height:26px}}
+/* ============ ARCADE GAMES ============ */
+.arc-title{display:flex;gap:12px;align-items:center;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.arc-title b{display:block;font-size:15.5px}
+.arc-title span{font-size:12.4px;color:var(--text-3)}
+.arc-scramble{font-family:var(--mono);font-size:clamp(19px,4.4vw,34px);font-weight:800;letter-spacing:.2em;text-align:center;padding:24px 12px;border:1px dashed var(--border-2);border-radius:var(--r);background:var(--bg-3);margin-bottom:14px;word-break:break-word}
+.arc-input{display:flex;gap:10px;max-width:460px;margin:0 auto}
+.fake-list{display:grid;gap:10px;max-width:480px;margin:0 auto}
+.fake-opt{text-align:left;font-weight:600}
+.sniper{max-width:480px;margin:0 auto 16px;text-align:center}
+.sniper input{width:100%;accent-color:var(--accent)}
+.sniper-val{font-size:22px;font-weight:760;margin-top:10px;font-variant-numeric:tabular-nums}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:520px;margin:0 auto}
+.mem-card{aspect-ratio:4/3;border-radius:12px;border:1px solid var(--border);background:var(--card-2);position:relative;overflow:hidden;transition:transform .25s var(--ease),opacity .25s}
+.mem-card:hover{transform:translateY(-3px)}
+.mem-card .mem-face{position:absolute;inset:0;display:grid;place-items:center;color:var(--text-4);transition:opacity .2s}
+.mem-card img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .28s}
+.mem-card.up img{opacity:1}
+.mem-card.up .mem-face{opacity:0}
+.mem-card.done{border-color:var(--accent-line);opacity:.62}
+.ttt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:300px;margin:0 auto}
+.ttt-cell{aspect-ratio:1;border-radius:12px;background:var(--card-2);border:1px solid var(--border);font-size:36px;font-weight:800;display:grid;place-items:center;transition:.2s var(--ease)}
+.ttt-cell:hover:not(:disabled){border-color:var(--accent-line)}
+.ttt-cell.x{color:var(--accent-2)}
+.ttt-cell.o{color:var(--warn)}
+.g2048{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;background:var(--bg-3);padding:8px;border-radius:14px;max-width:370px;margin:0 auto}
+.g2048 .t{aspect-ratio:1;display:grid;place-items:center;border-radius:10px;background:var(--card-2);font-weight:760;font-size:clamp(15px,4vw,22px);color:var(--text-2);transition:background .2s var(--ease)}
+.g2048 .t16{background:rgba(124,108,255,.2);color:var(--text)}
+.g2048 .t128{background:rgba(124,108,255,.38);color:#fff}
+.g2048 .t1k{background:var(--accent);color:#0a0a0e}
+.snake-wrap{position:relative;max-width:430px;margin:0 auto}
+.snake-grid{display:grid;grid-template-columns:repeat(15,1fr);gap:1px;background:var(--bg-3);padding:6px;border-radius:12px;aspect-ratio:1}
+.snake-grid>div{background:var(--card-2);border-radius:2px}
+.snake-grid .sn-body{background:rgba(124,108,255,.55)}
+.snake-grid .sn-head{background:var(--accent)}
+.snake-grid .sn-food{background:var(--good)}
+.snake-over{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(6,6,10,.78);border-radius:12px;backdrop-filter:blur(3px)}
+.snake-over b{font-size:20px;color:#fff}
+.snake-over span{color:var(--text-3);font-size:13px}
+.ms-top{display:flex;justify-content:center;margin-bottom:12px}
+.ms-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:3px;max-width:380px;margin:0 auto}
+.ms-cell{aspect-ratio:1;border-radius:6px;background:var(--card-2);border:1px solid var(--border);font-size:13px;font-weight:750;color:var(--text-2);display:grid;place-items:center;transition:background .15s}
+.ms-cell:hover{border-color:var(--border-3)}
+.ms-cell.open{background:var(--bg-3);border-color:transparent;cursor:default}
+.ms-cell.boom{background:rgba(255,107,107,.35);color:#fff}
+.ms-cell.flag{color:var(--warn)}
+.frenzy{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:430px;margin:0 auto}
+.fz-cell{aspect-ratio:1;border-radius:12px;background:var(--card-2);border:1px solid var(--border);display:grid;place-items:center;color:var(--accent);transition:transform .14s var(--ease),background .14s}
+.fz-cell.on{background:var(--accent);color:#0a0a0e;transform:scale(.93)}
+.gpad,.dpad{display:grid;justify-items:center;gap:6px;margin-top:16px}
+.gpad>div,.dpad>div{display:flex;gap:6px}
+.gpad button,.dpad button{width:54px;height:44px;border-radius:12px;background:var(--card-2);border:1px solid var(--border);display:grid;place-items:center;color:var(--text-2);transition:.18s var(--ease)}
+.gpad button:hover,.dpad button:hover{border-color:var(--accent-line);color:var(--text)}
+.gpad [data-d="left"] svg,.gpad [data-d="up"] svg,.dpad [data-d="left"] svg,.dpad [data-d="up"] svg{transform:rotate(180deg)}
+@media(max-width:520px){.mem-grid{grid-template-columns:repeat(3,1fr)}}
 /* ============ FLOW (full-screen scroll feed) ============ */
 .flow-shell{position:relative}
 body.flow-mode #page{padding-bottom:0}
@@ -641,7 +725,10 @@ body.flow-mode #page{padding-bottom:0}
 .arcade-card b{font-size:17px}
 .arcade-card p{font-size:13.2px;color:var(--text-3);line-height:1.6;flex:1}
 .arcade-best{font-size:11.5px;color:var(--text-4)}
-.arcade-play{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:620;color:var(--accent-2);margin-top:4px}
+.arcade-play{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:620;color:var(--accent-2);margin-top:4px;transition:transform .26s var(--ease)}
+.arcade-card:hover .arcade-play{transform:translateX(4px)}
+.arcade-card:hover .arcade-ic{transform:scale(1.06)}
+.arcade-ic{transition:transform .26s var(--spring)}
 .arcade-stage{max-width:820px;margin:0 auto}
 .arc-score{display:flex;gap:20px;font-size:13px;color:var(--text-3);margin-bottom:16px}
 .arc-score b{color:var(--text);font-variant-numeric:tabular-nums}
@@ -941,6 +1028,7 @@ const ICONS = {
   ban:'<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/>',
   restore:'<path d="M4 12a8 8 0 1 0 2.6-5.9M4 4v4h4"/>',
   send:'<path d="M21 3 3 10.5l7 3 3 7z"/><path d="M21 3 10 14"/>',
+  pause2:'<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',
   inbox:'<path d="M3.2 12.5h4.6l1.4 2.6h5.6l1.4-2.6h4.6"/><path d="M5 4.8h14l2 7.7v5.7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5.7z"/>',
   palette:'<path d="M12 3a9 9 0 1 0 0 18c1 0 1.8-.8 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H16A5 5 0 0 0 21 11c0-4.4-4-8-9-8z"/><circle cx="7.6" cy="12.4" r="1.1"/><circle cx="10" cy="8.4" r="1.1"/><circle cx="14.6" cy="8.6" r="1.1"/>',
   discord:'<path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.6 12.6 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.291.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>',
@@ -1398,6 +1486,7 @@ function route(force) {
   else if (name === 'achievements') html = viewAchievements();
   else html = viewNotFound();
 
+  stopAllAudio();
   page.innerHTML = html;
   renderNav();
   if (scroll) { try { window.scrollTo(0, 0); } catch (e) {} }
@@ -1510,6 +1599,9 @@ function afterRender(name, parts, q) {
   if (name === 'settings') {}
   if (name === 'landing') animateCounters();
   if (name === 'messages') afterMessagesRender();
+  hydrateAudio();
+  setupDropzone();
+  if (name !== 'arcade') arcStopTimers();
   document.body.classList.toggle('flow-mode', name === 'scroll');
   if (name === 'scroll') mountFlow(); else unmountFlow();
   hydrateVideos();
@@ -1710,7 +1802,7 @@ function viewLanding() {
         </a>
         <a class="f" href="#/arcade" style="display:block">
           <div class="ic">${ic('spark', 18)}</div><h3>The arcade</h3>
-          <p>Three small games built from real projects: Higher or Lower, This or That, and Guess the Category.</p>
+          <p>Fifteen games. Ten are built from the real projects on the site, five are classics. Higher or Lower, Spot the Fake, Minesweeper, 2048 and more.</p>
         </a>
       </div>
       <div class="discord-strip">
@@ -2254,7 +2346,7 @@ function viewProject(slug, q) {
       <div style="display:flex;gap:14px;align-items:center;min-width:0">
         <a href="#/profile/${c.username}"><img class="avatar" width="46" height="46" src="${c.avatar}" alt=""></a>
         <div style="min-width:0">
-          <a href="#/profile/${c.username}" style="font-weight:640;font-size:14.5px">${esc(c.displayName)}</a>
+          <a href="#/profile/${c.username}" style="font-weight:640;font-size:14.5px">${esc(c.displayName)}</a> ${pronounsHTML(c)}
           <div style="font-size:12.5px;color:var(--text-3)">@${esc(c.username)} · published ${fmtDate(p.createdAt)}</div>
         </div>
         ${!mine && ME ? `<button class="btn sm ${following ? 'outline' : 'primary'}" data-act="follow" data-id="${c.id}" style="margin-left:6px">${following ? 'Following' : 'Follow'}</button>` : ''}
@@ -2281,6 +2373,7 @@ function viewProject(slug, q) {
     ${p.views < 2 ? `<p class="human-note">${ic('eye', 13)} Nobody has opened this yet. You would be the first person to look at it.</p>` : ''}
 
     ${matureHidden(p) ? '' : videoPanel(p)}
+    ${p.music ? musicPanel(p.music, { kind: 'project', id: p.id, owner: mine }) : ''}
 
     <div class="layout">
       <div>
@@ -2679,11 +2772,11 @@ function viewProfile(username, q) {
   }
 
   return `<div class="wrap-wide profile-themed" style="${themeVars(u)}">
-    <div class="coverblock" style="${coverStyleCSS(u)}"></div>
+    <div class="coverblock${u.banner ? ' has-banner' : ''}" style="${u.banner ? `background-image:url('${u.banner}');background-size:cover;background-position:center` : coverStyleCSS(u)}"></div>
     <div class="phead">
       <img class="avatar" src="${u.avatar}" alt="" width="96" height="96">
       <div class="pinfo">
-        <h1>${esc(u.displayName)} ${s.trended ? `<span class="pill acc">${ic('flame', 11)} trending</span>` : ''}</h1>
+        <h1>${esc(u.displayName)} ${pronounsHTML(u)} ${s.trended ? `<span class="pill acc">${ic('flame', 11)} trending</span>` : ''}</h1>
         <div class="at">@${esc(u.username)} · <span class="pill" style="font-size:10.5px">${repLevel.label}</span></div>
         <p class="bio">${esc(u.bio || 'No bio yet.')}</p>
         <p style="font-size:12.5px;color:var(--text-4);margin-top:7px">${ic('clock', 12)} Joined ${fmtMonth(u.joined)}</p>
@@ -2711,6 +2804,7 @@ function viewProfile(username, q) {
       <div class="ps"><b>${fmtNum(s.likes)}</b><span>Likes</span></div>
       <div class="ps"><b style="color:var(--star)">${s.rating ? s.rating.toFixed(1) + ' ★' : '—'}</b><span>Avg rating</span></div>
     </div>
+    ${u.music ? `<div style="margin-top:20px">${musicPanel(u.music, { kind: 'profile', id: u.id, owner: mine })}</div>` : ''}
     <div class="tabs">${tabs.map(t => `<button class="${tab === t[0] ? 'on' : ''}" data-act="ptab" data-u="${u.username}" data-t="${t[0]}">${t[1]}${t[2] ? ` <span style="color:var(--text-4)">${t[2]}</span>` : ''}</button>`).join('')}</div>
     ${body}
   </div>`;
@@ -3158,7 +3252,8 @@ function viewSettings(q) {
       <p style="font-size:13.4px;color:var(--text-3);margin-bottom:14px">Deleting your account removes your profile, projects, comments and reviews. This cannot be undone.</p>
       <button class="btn danger" data-act="deleteaccount">Delete my account</button></div>`
     + syncPanel();
-  else if (tab === 'profile') body = settingsAvatar() + settingsTheme() + settingsLinks() + `
+  else if (tab === 'profile') body = settingsAvatar() + settingsPronounsAndBanner() + settingsTheme() + settingsLinks()
+    + (ME.music ? `<div class="panel"><h2>${ic('music', 16)} Profile music</h2>${musicPanel(ME.music, { kind: 'profile', id: ME.id, owner: true })}</div>` : '') + `
     <div class="panel"><h2>${ic('edit', 16)} Description</h2>
       <form id="set-profile">
         <div class="field"><label>Short description</label><textarea class="textarea" name="bio" maxlength="160" style="min-height:70px" placeholder="One line about you. This sits under your name everywhere.">${esc(ME.bio || '')}</textarea><span class="hint">160 characters. Shown next to your name everywhere.</span></div>
@@ -3300,6 +3395,9 @@ function migrateEconomy() {
     u.theme = u.theme || { accent: '#7c6cff', cover: 'glow' };
     u.links = u.links || {};
     u.showMature = !!u.showMature;
+    if (u.pronouns === undefined) u.pronouns = '';
+    if (u.banner === undefined) u.banner = '';
+    if (u.music === undefined) u.music = null;
     if (!DB.wallet[u.id]) DB.wallet[u.id] = { credits: 0, ledger: [] };
     DB.wallet[u.id].ledger = DB.wallet[u.id].ledger || [];
   });
@@ -3307,6 +3405,7 @@ function migrateEconomy() {
     if (p.boost === undefined) p.boost = null;
     if (p.mature === undefined) p.mature = false;
     if (!p.links) p.links = [];
+    if (p.music === undefined) p.music = null;
   });
 }
 
@@ -4975,207 +5074,897 @@ function unmountFlow() {
   if (flowIO) { flowIO.disconnect(); flowIO = null; }
   if (flowKey) { window.removeEventListener('keydown', flowKey); flowKey = null; }
 }
+/* ==========================================================================
+   ARCADE — fifteen small games.
+   Ten are built from the real projects on the site; five are classics.
+   ========================================================================== */
+const ARCGAMES = [
+  { id: 'hl', name: 'Higher or Lower', icon: 'flame', kind: 'data', blurb: 'Two projects. Which one has more views?' },
+  { id: 'tt', name: 'This or That', icon: 'heart', kind: 'data', blurb: 'Pick your favourite of two — the winner gets a real like from you.' },
+  { id: 'cat', name: 'Guess the Category', icon: 'layers', kind: 'data', blurb: 'One project, four categories. What is it?' },
+  { id: 'creator', name: 'Guess the Creator', icon: 'users', kind: 'data', blurb: 'Who made this one? Four names, one is right.' },
+  { id: 'tag', name: 'Tag Match', icon: 'filter', kind: 'data', blurb: 'Which tag actually belongs to this project?' },
+  { id: 'blur', name: 'Blur Reveal', icon: 'eye', kind: 'data', blurb: 'Name the category through the blur. The less you peek, the more you score.' },
+  { id: 'scramble', name: 'Title Scramble', icon: 'edit', kind: 'data', blurb: 'Unscramble the project name before your brain gives up.' },
+  { id: 'memory', name: 'Cover Memory', icon: 'grid', kind: 'data', blurb: 'Match pairs of covers from memory.' },
+  { id: 'fake', name: 'Spot the Fake', icon: 'ban', kind: 'data', blurb: 'Three real projects and one invented one. Find the lie.' },
+  { id: 'sniper', name: 'View Sniper', icon: 'chart', kind: 'data', blurb: 'How many views does this have? Get as close as you can.' },
+  { id: 'ttt', name: 'Tic-Tac-Toe', icon: 'grid', kind: 'classic', blurb: 'Against a computer that never loses.' },
+  { id: 'g2048', name: '2048', icon: 'layers', kind: 'classic', blurb: 'Slide and merge. Try to reach 2048.' },
+  { id: 'snake', name: 'Snake', icon: 'compass', kind: 'classic', blurb: 'Eat, grow, and do not bite yourself.' },
+  { id: 'mines', name: 'Minesweeper', icon: 'ban', kind: 'classic', blurb: 'Nine by nine, ten mines, classic rules.' },
+  { id: 'frenzy', name: 'Click Frenzy', icon: 'spark', kind: 'classic', blurb: 'Targets appear. Hit as many as you can in twenty seconds.' }
+];
+const ARCGAME = id => ARCGAMES.find(g => g.id === id) || ARCGAMES[0];
+const ARC = { game: null, round: null, msg: '', tone: '', score: 0, streak: 0 };
+let arcTimers = [];
+function arcStopTimers() { arcTimers.forEach(t => { clearInterval(t); clearTimeout(t); }); arcTimers = []; }
+if (typeof window !== 'undefined') window.VYNX_ARC = ARC;
 
-/* ------------------------------- ARCADE -------------------------------- */
-/* VYNX_ARC is exposed for the browser console (and the test suite). */
-
-const ARC = { game: null, round: null, msg: '', tone: '' };
+/* ------------------------------- scores -------------------------------- */
 function arcStats() {
   try { const o = JSON.parse(Store.get('vynx.arcade.v1') || '{}'); return o && typeof o === 'object' ? o : {}; } catch (e) { return {}; }
 }
 function arcSave(patch) { const s = Object.assign(arcStats(), patch); Store.set('vynx.arcade.v1', JSON.stringify(s)); return s; }
-const arcRandom = arr => arr[Math.floor(Math.random() * arr.length)];
+function arcBest(id) { return arcStats()['best_' + id] || 0; }
+function arcSetBest(id, v) { if (v > arcBest(id)) { arcSave({ ['best_' + id]: v }); return true; } return false; }
+function arcPlays(id) { return arcStats()['plays_' + id] || 0; }
+function arcBumpPlay(id) { arcSave({ ['plays_' + id]: arcPlays(id) + 1 }); }
+
+const arcRandom = a => a[Math.floor(Math.random() * a.length)];
+function arcShuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 function arcReady() { return live().length >= 2; }
 
+/* ------------------------------ data games ----------------------------- */
 function arcNewHL(prev) {
   const pool = live();
   if (pool.length < 2) return null;
   const a = prev || arcRandom(pool);
   const others = pool.filter(p => p.id !== a.id);
   if (!others.length) return null;
-  // two projects on the same view count would make both answers correct,
-  // so only pair up ones that actually differ (unless everything is level)
   const differ = others.filter(p => p.views !== a.views);
-  const b = arcRandom(differ.length ? differ : others);
-  return { a, b, reveal: false, level: !differ.length };
+  return { a, b: arcRandom(differ.length ? differ : others), reveal: false };
 }
 function arcNewTT() {
   const pool = live();
   if (pool.length < 2) return null;
   const a = arcRandom(pool);
-  const b = arcRandom(pool.filter(p => p.id !== a.id));
-  return { a, b, done: false };
+  return { a, b: arcRandom(pool.filter(p => p.id !== a.id)), done: false };
+}
+function arcPickOptions(correct, pool, n) {
+  const opts = [correct];
+  const extra = arcShuffle(pool.filter(x => x !== correct));
+  while (opts.length < n && extra.length) opts.push(extra.pop());
+  return arcShuffle(opts);
 }
 function arcNewCat() {
   const pool = live().filter(p => p.category);
   if (!pool.length) return null;
   const target = arcRandom(pool);
-  const others = CATEGORIES.filter(c => c !== target.category);
-  const opts = [target.category];
-  while (opts.length < 4 && others.length) opts.push(others.splice(Math.floor(Math.random() * others.length), 1)[0]);
-  for (let i = opts.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [opts[i], opts[j]] = [opts[j], opts[i]]; }
-  return { target, opts, picked: null };
+  return { target, opts: arcPickOptions(target.category, CATEGORIES.filter(c => c !== target.category), 4), picked: null };
 }
-function arcStart(game) {
-  ARC.game = game; ARC.msg = ''; ARC.tone = '';
-  ARC.round = game === 'hl' ? arcNewHL() : game === 'tt' ? arcNewTT() : arcNewCat();
-  ARC.score = 0; ARC.streak = 0;
-  if (!ARC.round) { ARC.msg = 'Not enough projects yet — you need at least two.'; ARC.tone = 'bad'; }
-  reload();
+function arcNewCreator() {
+  const pool = live();
+  const names = DB.users.filter(u => u.role !== 'admin' && projectsByCreator(u.id).length);
+  if (!pool.length || names.length < 2) return null;
+  const target = arcRandom(pool);
+  const correct = userById(target.creatorId);
+  if (!correct) return null;
+  const others = DB.users.filter(u => u.id !== correct.id && u.role !== 'admin').map(u => u.username);
+  return { target, correct, opts: arcPickOptions(correct.username, others, 4), picked: null };
+}
+function arcNewTag() {
+  const pool = live().filter(p => p.tags && p.tags.length);
+  if (!pool.length) return null;
+  const target = arcRandom(pool);
+  const correct = arcRandom(target.tags);
+  const others = [];
+  live().forEach(p => { if (p.id !== target.id) p.tags.forEach(t => { if (!target.tags.includes(t) && !others.includes(t)) others.push(t); }); });
+  GENRES.forEach(g => { if (!target.tags.includes(g) && !others.includes(g)) others.push(g); });
+  return { target, correct, opts: arcPickOptions(correct, others, 4), picked: null };
+}
+function arcNewBlur() {
+  const pool = live().filter(p => p.category);
+  if (!pool.length) return null;
+  const target = arcRandom(pool);
+  return { target, stage: 0, opts: arcPickOptions(target.category, CATEGORIES.filter(c => c !== target.category), 4), picked: null };
+}
+function arcNewScramble() {
+  const pool = live().filter(p => p.title && p.title.replace(/\s/g, '').length >= 3);
+  if (!pool.length) return null;
+  const target = arcRandom(pool);
+  const clean = target.title.toUpperCase();
+  let letters = clean.split('');
+  let out = clean;
+  let tries = 0;
+  while (out === clean && tries++ < 20) { out = arcShuffle(letters).join(''); }
+  return { target, scrambled: out, answer: '', done: false };
+}
+function arcNewMemory() {
+  const pool = live();
+  if (pool.length < 2) return null;
+  const picks = arcShuffle(pool).slice(0, Math.min(6, pool.length));
+  const cards = [];
+  picks.forEach(p => { cards.push({ key: p.id, cover: p.cover, title: p.title, up: false, matched: false }); cards.push({ key: p.id, cover: p.cover, title: p.title, up: false, matched: false }); });
+  return { cards: arcShuffle(cards), open: [], moves: 0, done: false };
+}
+function arcNewFake() {
+  const pool = live().filter(p => p.title);
+  if (pool.length < 3) return null;
+  const real = arcShuffle(pool).slice(0, 3);
+  const words = [];
+  pool.forEach(p => p.title.split(/\s+/).forEach(w => { if (w.length > 2 && !words.includes(w)) words.push(w); }));
+  let fake = '', tries = 0;
+  while (tries++ < 40) {
+    const w = arcShuffle(words).slice(0, 2).join(' ');
+    if (w && !pool.some(p => p.title.toLowerCase() === w.toLowerCase())) { fake = w; break; }
+  }
+  if (!fake) {
+    const extra = ['Neon Drift', 'Static Bloom', 'Hollow Point', 'Paper Lantern', 'Glass House', 'Slow Tide', 'Iron Meadow', 'Quiet Signal'];
+    fake = arcRandom(extra.filter(x => !pool.some(p => p.title.toLowerCase() === x.toLowerCase()))) || 'Untitled Prototype';
+  }
+  return { opts: arcShuffle(real.map(p => p.title).concat([fake])), fake, picked: null };
+}
+function arcNewSniper() {
+  const pool = live();
+  if (!pool.length) return null;
+  const target = arcRandom(pool);
+  const max = Math.max(10, ...pool.map(p => p.views)) * 1.1;
+  return { target, max: Math.round(max), guess: Math.round(max / 3), done: false, points: 0 };
 }
 
+/* ------------------------------- classics ------------------------------ */
+function arcNewTTT() { return { board: Array(9).fill(''), over: false, msg: '' }; }
+function arcTttWinner(b) {
+  const L = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  for (const [x, y, z] of L) if (b[x] && b[x] === b[y] && b[y] === b[z]) return b[x];
+  return b.every(v => v) ? 'draw' : null;
+}
+function arcTttMove(b, who) {
+  const L = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  for (const [x, y, z] of L) { const l = [b[x], b[y], b[z]]; if (l.filter(v => v === 'O').length === 2 && l.includes('')) return [x, y, z][l.indexOf('')]; }
+  for (const [x, y, z] of L) { const l = [b[x], b[y], b[z]]; if (l.filter(v => v === 'X').length === 2 && l.includes('')) return [x, y, z][l.indexOf('')]; }
+  if (!b[4]) return 4;
+  const corners = [0, 2, 6, 8].filter(i => !b[i]);
+  if (corners.length) return arcRandom(corners);
+  const free = b.map((v, i) => v ? -1 : i).filter(i => i >= 0);
+  return free.length ? arcRandom(free) : -1;
+}
+function arcNew2048() {
+  const g = Array(16).fill(0);
+  const add = () => { const free = g.map((v, i) => v ? -1 : i).filter(i => i >= 0); if (free.length) g[arcRandom(free)] = Math.random() < .9 ? 2 : 4; };
+  add(); add();
+  return { grid: g, score: 0, over: false, won: false };
+}
+function arcSlide(g, dir) {
+  const out = Array(16).fill(0); let gained = 0, moved = false;
+  for (let line = 0; line < 4; line++) {
+    const idx = [];
+    for (let k = 0; k < 4; k++) {
+      if (dir === 'left') idx.push(line * 4 + k);
+      else if (dir === 'right') idx.push(line * 4 + (3 - k));
+      else if (dir === 'up') idx.push(k * 4 + line);
+      else idx.push((3 - k) * 4 + line);
+    }
+    const vals = idx.map(i => g[i]).filter(v => v);
+    const merged = [];
+    for (let i = 0; i < vals.length; i++) {
+      if (vals[i] === vals[i + 1]) { merged.push(vals[i] * 2); gained += vals[i] * 2; i++; }
+      else merged.push(vals[i]);
+    }
+    while (merged.length < 4) merged.push(0);
+    idx.forEach((i, k) => { out[i] = merged[k]; if (out[i] !== g[i]) moved = true; });
+  }
+  return { grid: out, gained, moved };
+}
+function arcNewSnake() {
+  return { cells: [[7, 7], [6, 7], [5, 7]], dir: 'right', next: 'right', food: [11, 7], alive: true, score: 0, tick: 0 };
+}
+function arcNewMines() {
+  const cells = Array.from({ length: 81 }, (_, i) => ({ i, mine: false, open: false, flag: false, adj: 0 }));
+  let placed = 0;
+  while (placed < 10) { const i = Math.floor(Math.random() * 81); if (!cells[i].mine) { cells[i].mine = true; placed++; } }
+  const at = (x, y) => (x < 0 || y < 0 || x > 8 || y > 8) ? null : cells[y * 9 + x];
+  cells.forEach((c, i) => {
+    const x = i % 9, y = Math.floor(i / 9); let n = 0;
+    for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) { if (!dx && !dy) continue; const o = at(x + dx, y + dy); if (o && o.mine) n++; }
+    c.adj = n;
+  });
+  return { cells, over: false, won: false, flags: 0, flagMode: false };
+}
+function arcNewFrenzy() { return { score: 0, left: 20, idx: -1, running: true, best: 0 }; }
+
+/* ------------------------------ game control --------------------------- */
+function arcInit(id) {
+  arcStopTimers();
+  ARC.msg = ''; ARC.tone = ''; ARC.score = 0; ARC.streak = 0;
+  if (!arcReady()) { ARC.round = null; ARC.msg = 'Not enough projects yet — you need at least two.'; ARC.tone = 'bad'; return; }
+  ARC.round =
+    id === 'hl' ? arcNewHL() :
+    id === 'tt' ? arcNewTT() :
+    id === 'cat' ? arcNewCat() :
+    id === 'creator' ? arcNewCreator() :
+    id === 'tag' ? arcNewTag() :
+    id === 'blur' ? arcNewBlur() :
+    id === 'scramble' ? arcNewScramble() :
+    id === 'memory' ? arcNewMemory() :
+    id === 'fake' ? arcNewFake() :
+    id === 'sniper' ? arcNewSniper() :
+    id === 'ttt' ? arcNewTTT() :
+    id === 'g2048' ? arcNew2048() :
+    id === 'snake' ? arcNewSnake() :
+    id === 'mines' ? arcNewMines() :
+    arcNewFrenzy();
+  if (!ARC.round) { ARC.msg = 'This one needs a little more content on the site first.'; ARC.tone = 'bad'; }
+  arcBumpPlay(id);
+}
+function arcStart(id) { ARC.game = id; arcInit(id); reload(); if (id === 'snake') arcSnakeLoop(); if (id === 'frenzy') arcFrenzyLoop(); }
+function arcMenu() { arcStopTimers(); ARC.game = null; ARC.round = null; ARC.msg = ''; currentPath = ''; route(true); }
+function arcNext() {
+  arcStopTimers();
+  ARC.msg = ''; ARC.tone = '';
+  // Higher or Lower chains: the second project becomes the new first one
+  if (ARC.game === 'hl' && ARC.streak > 0 && ARC.round && ARC.round.b) {
+    const chained = arcNewHL(ARC.round.b);
+    if (chained) { ARC.round = chained; reload(); return; }
+  }
+  arcInit(ARC.game);
+  reload();
+  if (ARC.game === 'snake') arcSnakeLoop();
+  if (ARC.game === 'frenzy') arcFrenzyLoop();
+}
+
+/* -------------------------------- view --------------------------------- */
 function viewArcade(q) {
-  const s = arcStats();
   const game = q.game || null;
-  if (game && ['hl', 'tt', 'cat'].includes(game) && !ARC.game) arcStart(game);
+  if (game && ARCGAMES.some(g => g.id === game) && ARC.game !== game) arcStart(game);
   const header = `<div class="page-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
-      <div><h1>Arcade</h1><p>Three small games made out of the projects people have actually posted. No sign-in needed, nothing to lose.</p></div>
-      ${ARC.game ? `<button class="btn" data-act="arcmenu">${ic('x', 14)} Back to the games</button>` : `<button class="btn" data-act="shuffle">${ic('spark', 15)} Random project</button>`}
+      <div><h1>Arcade</h1><p>Fifteen games. Ten are built from the projects people have actually posted, five are classics. Nothing to download, nothing to lose.</p></div>
+      ${ARC.game
+        ? `<button class="btn" data-act="arcmenu">${ic('x', 14)} All games</button>`
+        : `<a class="btn primary" href="#/scroll">${ic('play', 15)} Scroll mode</a>`}
     </div>`;
   if (!arcReady()) {
     return `<div class="wrap-wide">${header}
       ${emptyState('play', 'Not enough projects yet.',
-        'The arcade runs on real projects, so it needs at least two of them. Post something, or come back once other people have.',
+        'Ten of these games run on real projects, so the arcade needs at least two of them. Post something, or come back once other people have.',
         '/create', 'Create a project')}</div>`;
   }
   if (!ARC.game) {
-    const cards = [
-      ['hl', 'Higher or Lower', 'Two projects. Guess which one has more views. Keep the streak alive as long as you can.', 'flame', 'Best streak: ' + (s.hlBest || 0)],
-      ['tt', 'This or That', 'Two covers side by side. Pick the one you like more — the winner gets a real like from you.', 'heart', 'Picks made: ' + (s.ttPicks || 0)],
-      ['cat', 'Guess the Category', 'One project, four categories. How well do you know what people make?', 'layers', 'Best streak: ' + (s.catBest || 0)]
-    ];
+    const card = g => `<button class="arcade-card" data-act="arcstart" data-game="${g.id}">
+        <span class="arcade-ic">${ic(g.icon, 22)}</span>
+        <b>${g.name}</b>
+        <p>${g.blurb}</p>
+        <span class="arcade-best">${arcPlays(g.id) ? 'Best ' + arcBest(g.id) + ' · played ' + arcPlays(g.id) + '×' : 'Not played yet'}</span>
+        <span class="arcade-play">${ic('play', 14)} Play</span>
+      </button>`;
     return `<div class="wrap-wide">${header}
-      <div class="arcade-grid">
-        ${cards.map(c => `<button class="arcade-card" data-act="arcstart" data-game="${c[0]}">
-          <span class="arcade-ic">${ic(c[3], 24)}</span>
-          <b>${c[1]}</b>
-          <p>${c[2]}</p>
-          <span class="arcade-best">${esc(c[4])}</span>
-          <span class="arcade-play">${ic('play', 14)} Play</span>
-        </button>`).join('')}
-      </div>
+      <div class="section-head"><div class="t"><h2>Made from Vynx</h2><p>These use the real projects on the site, so they get better as more people post.</p></div></div>
+      <div class="arcade-grid">${ARCGAMES.filter(g => g.kind === 'data').map(card).join('')}</div>
+      <div class="section-head" style="margin-top:34px"><div class="t"><h2>Classics</h2><p>Nothing to do with the site. Just here because they are fun.</p></div></div>
+      <div class="arcade-grid">${ARCGAMES.filter(g => g.kind === 'classic').map(card).join('')}</div>
     </div>`;
   }
-  return `<div class="wrap-wide">${header}<div class="arcade-stage">${arcStage()}</div></div>`;
-}
-function arcScoreBar(extra) {
-  return `<div class="arc-score">
-    <span>Score <b>${ARC.score}</b></span>
-    <span>Streak <b>${ARC.streak}</b></span>
-    ${extra ? `<span>${extra}</span>` : ''}
+  const g = ARCGAME(ARC.game);
+  return `<div class="wrap-wide">${header}
+    <div class="arcade-stage">
+      <div class="arc-title"><span class="arcade-ic" style="width:38px;height:38px;border-radius:12px">${ic(g.icon, 18)}</span>
+        <div><b>${g.name}</b><span>${g.blurb}</span></div>
+        <span class="arcade-best" style="margin-left:auto">Best ${arcBest(g.id)}</span></div>
+      ${ARC.msg ? `<div class="arc-msg ${ARC.tone}">${ARC.msg}</div>` : ''}
+      ${arcRender()}
+    </div>
   </div>`;
 }
-function arcStage() {
-  const r = ARC.round;
-  if (!r) return `<div class="mini-empty">${ic('ban', 16)}<span>This game could not start.</span></div>`;
-  if (ARC.game === 'hl') {
-    const a = r.a, b = r.b;
-    const reveal = r.reveal;
-    return `${arcScoreBar()}
-      ${ARC.msg ? `<div class="arc-msg ${ARC.tone}">${ARC.msg}</div>` : ''}
-      <div class="arc-pair">
-        <div class="arc-side">
-          <div class="arc-cover"><img src="${a.cover}" alt=""></div>
-          <b>${esc(a.title)}</b>
-          <span class="arc-views">${fmtNum(a.views)} views</span>
-        </div>
-        <div class="arc-side">
-          <div class="arc-cover"><img src="${b.cover}" alt=""></div>
-          <b>${esc(b.title)}</b>
-          <span class="arc-views">${reveal ? fmtNum(b.views) + ' views' : '??? views'}</span>
-        </div>
-      </div>
-      ${reveal
-        ? `<button class="btn primary block lg" data-act="archlnext">${ic('chevron', 16)} Next round</button>`
-        : `<div class="arc-actions">
-             <button class="btn primary lg" data-act="archl" data-v="higher">${ic('arrowUp', 16)} Higher than ${fmtNum(a.views)}</button>
-             <button class="btn lg" data-act="archl" data-v="lower">${ic('chevD', 16)} Lower than ${fmtNum(a.views)}</button>
-           </div>`}`;
-  }
-  if (ARC.game === 'tt') {
-    const a = r.a, b = r.b;
-    return `${arcScoreBar('Picks: ' + (arcStats().ttPicks || 0))}
-      ${ARC.msg ? `<div class="arc-msg ${ARC.tone}">${ARC.msg}</div>` : ''}
-      <p class="arc-prompt">Which one do you like more?</p>
-      <div class="arc-pair">
-        ${r.done ? '' : ''}
-        <button class="arc-pick" data-act="arctt" data-id="${a.id}">
-          <div class="arc-cover"><img src="${a.cover}" alt=""></div>
-          <b>${esc(a.title)}</b><span class="arc-by">@${esc((userById(a.creatorId) || {}).username || '')}</span>
-        </button>
-        <button class="arc-pick" data-act="arctt" data-id="${b.id}">
-          <div class="arc-cover"><img src="${b.cover}" alt=""></div>
-          <b>${esc(b.title)}</b><span class="arc-by">@${esc((userById(b.creatorId) || {}).username || '')}</span>
-        </button>
-      </div>
-      <p class="arc-fine">${ME ? 'The one you pick gets a like from you. That is the whole point.' : 'Log in and your pick gives the project a real like.'}</p>`;
-  }
-  const t = r.target;
-  return `${arcScoreBar()}
-    ${ARC.msg ? `<div class="arc-msg ${ARC.tone}">${ARC.msg}</div>` : ''}
-    <p class="arc-prompt">What category is this?</p>
-    <div class="arc-one"><div class="arc-cover"><img src="${t.cover}" alt=""></div><b>${esc(t.title)}</b></div>
-    <div class="arc-options">
-      ${r.opts.map(o => `<button class="arc-opt ${r.picked ? (o === t.category ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arccat" data-c="${esc(o)}">${esc(o)}</button>`).join('')}
-    </div>
-    ${r.picked ? `<button class="btn primary block lg" data-act="arcnext" style="margin-top:16px">Next project ${ic('chevron', 16)}</button>` : ''}`;
+function arcCounter(extra) {
+  return `<div class="arc-score"><span>Score <b>${ARC.score}</b></span><span>Streak <b>${ARC.streak}</b></span>${extra ? `<span>${extra}</span>` : ''}</div>`;
 }
+function arcRevealButton(label) { return `<button class="btn primary block lg" data-act="arcnext" style="margin-top:16px">${label || 'Next'} ${ic('chevron', 16)}</button>`; }
+
+function arcRender() {
+  const r = ARC.round;
+  if (!r) return `<div class="mini-empty">${ic('ban', 16)}<span>${esc(ARC.msg || 'This game could not start.')}</span></div>`;
+  switch (ARC.game) {
+    /* ---------------- Higher or Lower ---------------- */
+    case 'hl': {
+      const { a, b, reveal } = r;
+      return `${arcCounter()}
+        <div class="arc-pair">
+          <div class="arc-side"><div class="arc-cover"><img src="${a.cover}" alt=""></div><b>${esc(a.title)}</b><span class="arc-views">${fmtNum(a.views)} views</span></div>
+          <div class="arc-side"><div class="arc-cover"><img src="${b.cover}" alt=""></div><b>${esc(b.title)}</b><span class="arc-views">${reveal ? fmtNum(b.views) + ' views' : '??? views'}</span></div>
+        </div>
+        ${reveal ? arcRevealButton('Next round')
+          : `<div class="arc-actions">
+               <button class="btn primary lg" data-act="archl" data-v="higher">${ic('arrowUp', 16)} Higher than ${fmtNum(a.views)}</button>
+               <button class="btn lg" data-act="archl" data-v="lower">${ic('chevD', 16)} Lower than ${fmtNum(a.views)}</button>
+             </div>`}`;
+    }
+    /* ---------------- This or That ---------------- */
+    case 'tt': {
+      const { a, b } = r;
+      return `${arcCounter('Picks: ' + (arcStats().ttPicks || 0))}
+        <p class="arc-prompt">Which one do you like more?</p>
+        <div class="arc-pair">
+          <button class="arc-pick" data-act="arctt" data-id="${a.id}"><div class="arc-cover"><img src="${a.cover}" alt=""></div><b>${esc(a.title)}</b><span class="arc-by">@${esc((userById(a.creatorId) || {}).username || '')}</span></button>
+          <button class="arc-pick" data-act="arctt" data-id="${b.id}"><div class="arc-cover"><img src="${b.cover}" alt=""></div><b>${esc(b.title)}</b><span class="arc-by">@${esc((userById(b.creatorId) || {}).username || '')}</span></button>
+        </div>
+        <p class="arc-fine">${ME ? 'The one you pick gets a like from you. That is the whole point.' : 'Log in and your pick gives the project a real like.'}</p>`;
+    }
+    /* ---------------- Guess the Category ---------------- */
+    case 'cat':
+      return `${arcCounter()}
+        <p class="arc-prompt">What category is this?</p>
+        <div class="arc-one"><div class="arc-cover"><img src="${r.target.cover}" alt=""></div><b>${esc(r.target.title)}</b></div>
+        <div class="arc-options">${r.opts.map(o => `<button class="arc-opt ${r.picked ? (o === r.target.category ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arccat" data-c="${esc(o)}">${esc(o)}</button>`).join('')}</div>
+        ${r.picked ? arcRevealButton('Next project') : ''}`;
+    /* ---------------- Guess the Creator ---------------- */
+    case 'creator':
+      return `${arcCounter()}
+        <p class="arc-prompt">Who made this?</p>
+        <div class="arc-one"><div class="arc-cover"><img src="${r.target.cover}" alt=""></div><b>${esc(r.target.title)}</b></div>
+        <div class="arc-options">${r.opts.map(o => `<button class="arc-opt ${r.picked ? (o === r.correct.username ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arccreator" data-u="${esc(o)}">@${esc(o)}</button>`).join('')}</div>
+        ${r.picked ? arcRevealButton('Next one') : ''}`;
+    /* ---------------- Tag Match ---------------- */
+    case 'tag':
+      return `${arcCounter()}
+        <p class="arc-prompt">Which tag is on this project?</p>
+        <div class="arc-one"><div class="arc-cover"><img src="${r.target.cover}" alt=""></div><b>${esc(r.target.title)}</b><span class="arc-by">${esc(r.target.category)}</span></div>
+        <div class="arc-options">${r.opts.map(o => `<button class="arc-opt ${r.picked ? (o === r.correct ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arctag" data-t="${esc(o)}">${esc(o)}</button>`).join('')}</div>
+        ${r.picked ? arcRevealButton('Next one') : ''}`;
+    /* ---------------- Blur Reveal ---------------- */
+    case 'blur': {
+      const b = [46, 26, 12, 0][r.stage] || 0;
+      return `${arcCounter('Worth ' + (4 - r.stage) + ' pt' + (4 - r.stage === 1 ? '' : 's'))}
+        <p class="arc-prompt">What category is this?</p>
+        <div class="arc-one">
+          <div class="arc-cover" style="max-width:420px"><img src="${r.target.cover}" alt="" style="filter:blur(${b}px) saturate(.9);transition:filter .4s ease"></div>
+          ${r.stage < 3 && !r.picked ? `<button class="btn sm" data-act="arcblurmore">${ic('eye', 13)} Reveal more (worth less)</button>` : ''}
+        </div>
+        <div class="arc-options">${r.opts.map(o => `<button class="arc-opt ${r.picked ? (o === r.target.category ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arcblur" data-c="${esc(o)}">${esc(o)}</button>`).join('')}</div>
+        ${r.picked ? arcRevealButton('Next one') : ''}`;
+    }
+    /* ---------------- Title Scramble ---------------- */
+    case 'scramble':
+      return `${arcCounter()}
+        <p class="arc-prompt">Unscramble this project name</p>
+        <div class="arc-scramble">${esc(r.scrambled)}</div>
+        <div class="arc-input"><input class="input" id="arc-guess" value="${esc(r.answer || '')}" placeholder="Type the name…" autocomplete="off" ${r.done ? 'disabled' : ''}>
+          <button class="btn primary" data-act="arcscramble" ${r.done ? 'disabled' : ''}>Check</button></div>
+        ${r.done ? `<div class="arc-msg ${r.tone === 'good' ? 'good' : 'bad'}" style="margin-top:14px">It was <b>${esc(r.target.title)}</b>.</div>${arcRevealButton('Next one')}` : `<p class="arc-fine">Hint: it is ${r.target.title.length} characters long and filed under ${esc(r.target.category)}.</p>`}`;
+    /* ---------------- Cover Memory ---------------- */
+    case 'memory':
+      return `${arcCounter('Moves ' + r.moves + '</span><span>Pairs ' + (r.cards.filter(c => c.matched).length / 2) + '/' + (r.cards.length / 2))}
+        <div class="mem-grid">${r.cards.map((c, i) => `<button class="mem-card ${c.up || c.matched ? 'up' : ''} ${c.matched ? 'done' : ''}" data-act="arcmem" data-i="${i}">
+          <span class="mem-face">${ic('spark', 20)}</span>
+          <img src="${c.cover}" alt="">
+        </button>`).join('')}</div>
+        ${r.done ? `<div class="arc-msg good" style="margin-top:16px">Cleared in ${r.moves} moves.</div>${arcRevealButton('Play again')}` : ''}`;
+    /* ---------------- Spot the Fake ---------------- */
+    case 'fake':
+      return `${arcCounter()}
+        <p class="arc-prompt">Three of these are real projects on Vynx. One is invented.</p>
+        <div class="fake-list">${r.opts.map(o => `<button class="arc-opt fake-opt ${r.picked ? (o === r.fake ? 'right' : o === r.picked ? 'wrong' : 'dim') : ''}" data-act="arcfake" data-t="${esc(o)}">${esc(o)}</button>`).join('')}</div>
+        ${r.picked ? `<div class="arc-msg ${ARC.tone === 'good' ? 'good' : 'bad'}">${ARC.tone === 'good' ? 'Caught it.' : 'It was <b>' + esc(r.fake) + '</b>.'}</div>${arcRevealButton('Next round')}` : ''}`;
+    /* ---------------- View Sniper ---------------- */
+    case 'sniper':
+      return `${arcCounter()}
+        <p class="arc-prompt">How many views has this had?</p>
+        <div class="arc-one"><div class="arc-cover" style="max-width:420px"><img src="${r.target.cover}" alt=""></div><b>${esc(r.target.title)}</b></div>
+        <div class="sniper">
+          <input type="range" min="0" max="${r.max}" value="${r.guess}" id="arc-snipe" ${r.done ? 'disabled' : ''}>
+          <div class="sniper-val" id="arc-snipe-val">${fmtNum(r.guess)} views</div>
+        </div>
+        ${r.done
+          ? `<div class="arc-msg ${r.points > 0 ? 'good' : 'bad'}">It actually has <b>${fmtNum(r.target.views)}</b> views. You were ${Math.round(Math.abs(r.guess - r.target.views))} off — ${r.points} point${r.points === 1 ? '' : 's'}.</div>${arcRevealButton('Next one')}`
+          : `<button class="btn primary block lg" data-act="arcsnipe">Lock in ${fmtNum(r.guess)}</button>`}`;
+    /* ---------------- Tic-Tac-Toe ---------------- */
+    case 'ttt':
+      return `${arcCounter('You are X')}
+        <div class="ttt-grid">${r.board.map((v, i) => `<button class="ttt-cell ${v === 'X' ? 'x' : v === 'O' ? 'o' : ''}" data-act="arcttt" data-i="${i}" ${v || r.over ? 'disabled' : ''}>${v}</button>`).join('')}</div>
+        ${r.over ? `<div class="arc-msg ${r.result === 'X' ? 'good' : r.result === 'draw' ? '' : 'bad'}">${r.result === 'X' ? 'You beat it. Rare.' : r.result === 'draw' ? 'A draw. It never loses, so that is a result.' : 'It won.'}</div>${arcRevealButton('Play again')}` : `<p class="arc-fine">Three in a row. Good luck — it defends properly.</p>`}`;
+    /* ---------------- 2048 ---------------- */
+    case 'g2048':
+      return `${arcCounter('Best tile ' + Math.max(...r.grid))}
+        <div class="g2048">${r.grid.map((v, i) => `<div class="t${v >= 1024 ? ' t1k' : v >= 128 ? ' t128' : v >= 16 ? ' t16' : ''}" data-i="${i}">${v || ''}</div>`).join('')}</div>
+        <div class="gpad">
+          <button data-act="arc2048" data-d="up">${ic('chevD', 18)}</button>
+          <div><button data-act="arc2048" data-d="left">${ic('chevron', 18)}</button><button data-act="arc2048" data-d="down">${ic('chevD', 18)}</button><button data-act="arc2048" data-d="right">${ic('chevron', 18)}</button></div>
+        </div>
+        ${r.over ? `<div class="arc-msg bad">No moves left.</div>${arcRevealButton('Play again')}` : `<p class="arc-fine">Arrow keys, swipe, or the buttons.</p>`}`;
+    /* ---------------- Snake ---------------- */
+    case 'snake':
+      return `${arcCounter('Length ' + r.cells.length + '</span><span>Best ' + arcBest('snake'))}
+        <div class="snake-wrap"><div class="snake-grid" id="snake-grid">${snakeCellsHTML(r)}</div>
+        ${r.alive ? '' : `<div class="snake-over"><b>Game over</b><span>Score ${r.score}</span><button class="btn primary" data-act="arcnext">${ic('restore', 14)} Again</button></div>`}</div>
+        <div class="dpad">
+          <button data-act="arcsnake" data-d="up">${ic('chevD', 18)}</button>
+          <div><button data-act="arcsnake" data-d="left">${ic('chevron', 18)}</button><button data-act="arcsnake" data-d="down">${ic('chevD', 18)}</button><button data-act="arcsnake" data-d="right">${ic('chevron', 18)}</button></div>
+        </div>
+        <p class="arc-fine">Arrow keys or WASD. Walls kill you.</p>`;
+    /* ---------------- Minesweeper ---------------- */
+    case 'mines':
+      return `${arcCounter('Flags ' + r.flags + '/10')}
+        <div class="ms-top"><button class="btn sm ${r.flagMode ? 'primary' : ''}" data-act="arcflag">${r.flagMode ? 'Flagging' : 'Digging'} — tap to switch</button></div>
+        <div class="ms-grid">${r.cells.map(c => `<button class="ms-cell ${c.open ? 'open' : ''} ${c.mine && c.open ? 'boom' : ''} ${c.flag ? 'flag' : ''}" data-act="arcmine" data-i="${c.i}">${c.flag ? '⚑' : c.open ? (c.mine ? '✱' : (c.adj || '')) : ''}</button>`).join('')}</div>
+        ${r.over ? `<div class="arc-msg ${r.won ? 'good' : 'bad'}">${r.won ? 'Field cleared.' : 'Boom.'}</div>${arcRevealButton('Play again')}` : ''}`;
+    /* ---------------- Click Frenzy ---------------- */
+    case 'frenzy':
+      return `${arcCounter('Hits ' + r.score + '</span><span>Time ' + r.left + 's')}
+        <div class="frenzy" id="frenzy-grid">
+          ${Array.from({ length: 25 }, (_, i) => `<button class="fz-cell ${i === r.idx ? 'on' : ''}" data-act="arcfrenzy" data-i="${i}">${i === r.idx ? ic('spark', 18, 0, true) : ''}</button>`).join('')}
+        </div>
+        ${r.left <= 0 ? `<div class="arc-msg good">Time. ${r.score} hit${r.score === 1 ? '' : 's'}.</div>${arcRevealButton('Again')}` : `<p class="arc-fine">Hit the glowing square. It moves.</p>`}`;
+  }
+  return '';
+}
+function snakeCellsHTML(r) {
+  const N = 15;
+  const head = r.cells[0], body = new Set(r.cells.slice(1).map(c => c[0] + ',' + c[1]));
+  let out = '';
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+    const k = x + ',' + y;
+    out += `<div class="${head[0] === x && head[1] === y ? 'sn-head' : body.has(k) ? 'sn-body' : (r.food[0] === x && r.food[1] === y) ? 'sn-food' : ''}"></div>`;
+  }
+  return out;
+}
+function arcPaintSnake() {
+  const g = $('#snake-grid'); if (g && ARC.round) g.innerHTML = snakeCellsHTML(ARC.round);
+  const bar = $('.arc-score'); if (bar) bar.innerHTML = `<span>Score <b>${ARC.score}</b></span><span>Length <b>${ARC.round.cells.length}</b></span>`;
+}
+function arcSnakeLoop() {
+  arcStopTimers();
+  const t = setInterval(() => {
+    const r = ARC.round;
+    if (!r || ARC.game !== 'snake' || !r.alive) { clearInterval(t); return; }
+    r.dir = r.next;
+    const h = r.cells[0];
+    const d = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] }[r.dir];
+    const nx = h[0] + d[0], ny = h[1] + d[1];
+    if (nx < 0 || ny < 0 || nx > 14 || ny > 14 || r.cells.some(c => c[0] === nx && c[1] === ny)) {
+      r.alive = false; arcSetBest('snake', r.score); reload(); return;
+    }
+    r.cells.unshift([nx, ny]);
+    if (nx === r.food[0] && ny === r.food[1]) {
+      r.score += 10; ARC.score = r.score;
+      let f;
+      do { f = [Math.floor(Math.random() * 15), Math.floor(Math.random() * 15)]; } while (r.cells.some(c => c[0] === f[0] && c[1] === f[1]));
+      r.food = f;
+    } else r.cells.pop();
+    arcPaintSnake();
+  }, 150);
+  arcTimers.push(t);
+}
+function arcFrenzyLoop() {
+  arcStopTimers();
+  const t = setInterval(() => {
+    const r = ARC.round;
+    if (!r || ARC.game !== 'frenzy' || r.left <= 0) { clearInterval(t); if (r && r.left <= 0) { arcSetBest('frenzy', r.score); reload(); } return; }
+    r.left--; r.idx = Math.floor(Math.random() * 25);
+    const g = $('#frenzy-grid');
+    if (g) g.innerHTML = Array.from({ length: 25 }, (_, i) => `<button class="fz-cell ${i === r.idx ? 'on' : ''}" data-act="arcfrenzy" data-i="${i}">${i === r.idx ? ic('spark', 18, 0, true) : ''}</button>`).join('');
+    const bar = $('.arc-score'); if (bar) bar.innerHTML = `<span>Score <b>${r.score}</b></span><span>Hits <b>${r.score}</b></span><span>Time <b>${r.left}s</b></span>`;
+  }, 1000);
+  arcTimers.push(t);
+}
+
+/* ------------------------------ game actions --------------------------- */
 function arcHL(choice) {
   const r = ARC.round; if (!r || r.reveal) return;
   const a = r.a.views, b = r.b.views;
   const correct = choice === 'higher' ? b >= a : b <= a;
   r.reveal = true;
-  if (correct) {
-    ARC.score++; ARC.streak++;
-    const best = Math.max(arcStats().hlBest || 0, ARC.streak);
-    arcSave({ hlBest: best });
-    ARC.msg = 'Correct — ' + fmtNum(b) + ' views.'; ARC.tone = 'good';
-  } else {
-    ARC.streak = 0;
-    ARC.msg = 'Nope — it had ' + fmtNum(b) + ' views.'; ARC.tone = 'bad';
-  }
+  if (correct) { ARC.score++; ARC.streak++; arcSetBest('hl', ARC.streak); ARC.msg = 'Correct — ' + fmtNum(b) + ' views.'; ARC.tone = 'good'; }
+  else { ARC.streak = 0; ARC.msg = 'Nope — it had ' + fmtNum(b) + ' views.'; ARC.tone = 'bad'; }
   reload();
 }
-function arcHLNext() {
-  const r = ARC.round; if (!r) return;
-  ARC.msg = ''; ARC.tone = '';
-  ARC.round = ARC.streak > 0 ? arcNewHL(r.b) : arcNewHL();
-  reload();
-}
+function arcHLNext() { const r = ARC.round; ARC.msg = ''; ARC.tone = ''; ARC.round = ARC.streak > 0 ? arcNewHL(r.b) : arcNewHL(); reload(); }
 function arcTT(id) {
   const r = ARC.round; if (!r || !r.a || !r.b) return;
   const winner = projectById(id), loser = r.a.id === id ? r.b : r.a;
   if (!winner) { ARC.msg = 'That project is no longer available.'; ARC.tone = 'bad'; ARC.round = arcNewTT(); reload(); return; }
   let liked = false;
-  if (ME && winner && winner.creatorId !== ME.id && !winner.likes.includes(ME.id)) { winner.likes.push(ME.id); liked = true; }
-  if (ME && winner) notify(winner.creatorId, 'like', `<b>@${esc(ME.username)}</b> picked <b>${esc(winner.title)}</b> in This or That`, '#/project/' + winner.slug);
-  const s = arcSave({ ttPicks: (arcStats().ttPicks || 0) + 1 });
+  if (ME && winner.creatorId !== ME.id && !winner.likes.includes(ME.id)) { winner.likes.push(ME.id); liked = true; }
+  if (ME) notify(winner.creatorId, 'like', `<b>@${esc(ME.username)}</b> picked <b>${esc(winner.title)}</b> in This or That`, '#/project/' + winner.slug);
+  arcSave({ ttPicks: (arcStats().ttPicks || 0) + 1 });
   if (liked) saveDB();
   ARC.msg = `${liked ? 'Liked' : 'Picked'} ${winner.title}${loser && loser.title ? ' over ' + loser.title : ''}.`;
   ARC.tone = 'good';
   ARC.round = arcNewTT();
   reload();
 }
-function arcCat(choice) {
+function arcChoice(id, key, correctFn, label) {
   const r = ARC.round; if (!r || r.picked) return;
-  r.picked = choice;
-  if (choice === r.target.category) {
-    ARC.score++; ARC.streak++;
-    arcSave({ catBest: Math.max(arcStats().catBest || 0, ARC.streak) });
-    ARC.msg = 'Right — it is ' + r.target.category + '.'; ARC.tone = 'good';
-  } else {
-    ARC.streak = 0;
-    ARC.msg = 'It was ' + r.target.category + '.'; ARC.tone = 'bad';
+  r.picked = id;
+  if (correctFn(id)) { ARC.score++; ARC.streak++; arcSetBest(ARC.game, ARC.streak); ARC.msg = 'Right — ' + label + '.'; ARC.tone = 'good'; }
+  else { ARC.streak = 0; ARC.msg = 'Not quite — ' + label + '.'; ARC.tone = 'bad'; }
+  reload();
+}
+function arcScramble() {
+  const r = ARC.round; if (!r || r.done) return;
+  const i = $('#arc-guess'); const val = (i ? i.value : '').trim();
+  r.answer = val;
+  const ok = val.toLowerCase().replace(/\s+/g, ' ') === r.target.title.toLowerCase().replace(/\s+/g, ' ');
+  r.done = true;
+  if (ok) { ARC.score++; ARC.streak++; arcSetBest('scramble', ARC.streak); ARC.tone = 'good'; }
+  else { ARC.streak = 0; ARC.tone = 'bad'; }
+  reload();
+}
+function arcMem(i) {
+  const r = ARC.round; if (!r || r.done) return;
+  const c = r.cards[i];
+  if (!c || c.up || c.matched || r.open.length >= 2) return;
+  c.up = true; r.open.push(i);
+  if (r.open.length === 2) {
+    r.moves++;
+    const [x, y] = r.open;
+    if (r.cards[x].key === r.cards[y].key) {
+      r.cards[x].matched = r.cards[y].matched = true; r.open = []; ARC.score += 10;
+      if (r.cards.every(k => k.matched)) { r.done = true; arcSetBest('memory', Math.max(1, 200 - r.moves * 5)); }
+    } else {
+      const [a, b] = r.open; r.open = [];
+      setTimeout(() => { if (ARC.round === r) { r.cards[a].up = false; r.cards[b].up = false; reload(); } }, 700);
+    }
   }
   reload();
 }
-function arcNext() { ARC.msg = ''; ARC.tone = ''; ARC.round = ARC.game === 'hl' ? arcNewHL() : ARC.game === 'tt' ? arcNewTT() : arcNewCat(); reload(); }
-if (typeof window !== 'undefined') window.VYNX_ARC = ARC;
-function arcMenu() { ARC.game = null; ARC.round = null; ARC.msg = ''; if (parseHash().parts[0] === 'arcade') { currentPath = ''; route(true); } else reload(); }
+function arcFake(t) {
+  const r = ARC.round; if (!r || r.picked) return;
+  r.picked = t;
+  if (t === r.fake) { ARC.score++; ARC.streak++; arcSetBest('fake', ARC.streak); ARC.tone = 'good'; ARC.msg = 'Caught it.'; }
+  else { ARC.streak = 0; ARC.tone = 'bad'; ARC.msg = 'That one is real. It was ' + r.fake + '.'; }
+  reload();
+}
+function arcSnipe() {
+  const r = ARC.round; if (!r || r.done) return;
+  const s = $('#arc-snipe'); if (s) r.guess = parseInt(s.value, 10) || 0;
+  r.done = true;
+  const rel = Math.abs(r.guess - r.target.views) / Math.max(1, r.target.views);
+  r.points = rel <= .05 ? 3 : rel <= .15 ? 2 : rel <= .35 ? 1 : 0;
+  ARC.score += r.points;
+  arcSetBest('sniper', ARC.score);
+  reload();
+}
+function arcTTTMove(i) {
+  const r = ARC.round; if (!r || r.over || r.board[i]) return;
+  r.board[i] = 'X';
+  let w = arcTttWinner(r.board);
+  if (w) { r.over = true; r.result = w; }
+  else {
+    const m = arcTttMove(r.board, 'O');
+    if (m >= 0) r.board[m] = 'O';
+    w = arcTttWinner(r.board);
+    if (w) { r.over = true; r.result = w; }
+  }
+  reload();
+}
+function arc2048(dir) {
+  const r = ARC.round; if (!r || r.over) return;
+  const res = arcSlide(r.grid, dir);
+  if (!res.moved) return;
+  r.grid = res.grid; r.score += res.gained; ARC.score = r.score;
+  const free = r.grid.map((v, i) => v ? -1 : i).filter(i => i >= 0);
+  if (free.length) r.grid[arcRandom(free)] = Math.random() < .9 ? 2 : 4;
+  if (r.grid.includes(2048)) r.won = true;
+  if (!arcSlide(r.grid, 'left').moved && !arcSlide(r.grid, 'right').moved && !arcSlide(r.grid, 'up').moved && !arcSlide(r.grid, 'down').moved) r.over = true;
+  arcSetBest('g2048', Math.max(...r.grid));
+  reload();
+}
+function arcSnakeDir(d) {
+  const r = ARC.round; if (!r || !r.alive) return;
+  const opp = { up: 'down', down: 'up', left: 'right', right: 'left' }[d];
+  if (r.dir === opp) return;
+  r.next = d;
+}
+function arcMine(i) {
+  const r = ARC.round; if (!r || r.over) return;
+  const c = r.cells[i]; if (!c || c.open) return;
+  if (r.flagMode) { c.flag = !c.flag; r.flags += c.flag ? 1 : -1; reload(); return; }
+  if (c.flag) return;
+  c.open = true;
+  if (c.mine) {
+    r.over = true; r.won = false;
+    r.cells.forEach(k => { if (k.mine) k.open = true; });
+  } else if (c.adj === 0) {
+    const stack = [i];
+    while (stack.length) {
+      const cur = stack.pop(); const x = cur % 9, y = Math.floor(cur / 9);
+      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+        const nx = x + dx, ny = y + dy;
+        if (nx < 0 || ny < 0 || nx > 8 || ny > 8) continue;
+        const o = r.cells[ny * 9 + nx];
+        if (!o.open && !o.mine && !o.flag) { o.open = true; if (o.adj === 0) stack.push(o.i); }
+      }
+    }
+  }
+  if (!r.over && r.cells.every(k => k.open || k.mine)) { r.over = true; r.won = true; }
+  reload();
+}
+function arcFrenzy(i) {
+  const r = ARC.round; if (!r || r.left <= 0) return;
+  if (i !== r.idx) return;
+  r.score++; ARC.score = r.score;
+  r.idx = Math.floor(Math.random() * 25);
+  const g = $('#frenzy-grid');
+  if (g) g.innerHTML = Array.from({ length: 25 }, (_, k) => `<button class="fz-cell ${k === r.idx ? 'on' : ''}" data-act="arcfrenzy" data-i="${k}">${k === r.idx ? ic('spark', 18, 0, true) : ''}</button>`).join('');
+  const bar = $('.arc-score'); if (bar) bar.innerHTML = `<span>Score <b>${r.score}</b></span><span>Hits <b>${r.score}</b></span><span>Time <b>${r.left}s</b></span>`;
+}
+function arcKeyboard(e) {
+  if (!ARC.game || parseHash().parts[0] !== 'arcade') return;
+  const t = (document.activeElement || {}).tagName || '';
+  if (/INPUT|TEXTAREA|SELECT/.test(t)) return;
+  const K = e.key.toLowerCase();
+  const map = { arrowup: 'up', arrowdown: 'down', arrowleft: 'left', arrowright: 'right', w: 'up', s: 'down', a: 'left', d: 'right' };
+  if (ARC.game === 'snake' && map[K]) { e.preventDefault(); arcSnakeDir(map[K]); return; }
+  if (ARC.game === 'g2048' && map[K]) { e.preventDefault(); arc2048(map[K]); return; }
+}
+window.addEventListener('keydown', arcKeyboard);
+/* ==========================================================================
+   MEDIA — banners, pronouns, music and a drawing tool.
+   Audio and drawn art are stored the same way videos are: blobs in IndexedDB,
+   with only a small reference kept on the record itself.
+   ========================================================================== */
+
+/* ------------------------------- pronouns ------------------------------ */
+const PRONOUNS = ['', 'she/her', 'he/him', 'they/them', 'she/they', 'he/they', 'it/its'];
+function pronounsHTML(u) {
+  const p = (u && u.pronouns || '').trim();
+  return p ? `<span class="pronouns">${esc(p)}</span>` : '';
+}
+function settingsPronounsAndBanner() {
+  const p = (ME.pronouns || '').trim();
+  return `<div class="panel"><h2>${ic('user', 16)} Name, pronouns &amp; banner</h2>
+    <div class="field"><label>Pronouns</label>
+      <div class="chips" style="margin-bottom:9px">
+        ${PRONOUNS.map(x => `<button class="chip" data-act="setpronouns" data-p="${esc(x)}" style="${p === x ? 'border-color:var(--accent-line);color:var(--accent-2);background:var(--accent-dim)' : ''}">${x ? esc(x) : 'None'}</button>`).join('')}
+      </div>
+      <input class="input" id="pronouns-custom" maxlength="24" value="${esc(p)}" placeholder="Or type your own — e.g. fae/faer">
+      <span class="hint">Shown next to your name on your profile and on anything you post.</span></div>
+    <button class="btn primary" data-act="savepronouns">Save pronouns</button>
+    <div class="bar-line"></div>
+    <h2 style="font-size:14px;margin-bottom:8px">Profile banner</h2>
+    <p style="font-size:13.2px;color:var(--text-3);margin-bottom:12px">A wide image across the top of your profile. 1600&times;500 works best. If you skip it, your theme colours are used instead.</p>
+    <div class="banner-preview" id="banner-preview" style="${ME.banner ? `background-image:url('${ME.banner}')` : coverStyleCSS(ME)}">
+      ${ME.banner ? '' : '<span>Your theme colours</span>'}
+    </div>
+    <div style="display:flex;gap:9px;margin-top:12px;flex-wrap:wrap">
+      <button class="btn" data-act="pickbanner">${ic('image', 14)} ${ME.banner ? 'Replace banner' : 'Upload banner'}</button>
+      <button class="btn outline" data-act="drawwide" title="Draw a banner">${ic('brush', 14)} Draw one</button>
+      ${ME.banner ? `<button class="btn danger" data-act="clearbanner">Remove</button>` : ''}
+    </div>
+  </div>`;
+}
+
+/* -------------------------------- music -------------------------------- */
+const AUDIO_EXT = /\.(mp3|m4a|aac|wav|ogg|oga|opus|flac)$/i;
+const MAX_AUDIO_BYTES = 15 * 1024 * 1024;
+function readAudioFile(file) {
+  return new Promise((res, rej) => {
+    if (!file) return rej('nofile');
+    if (!/^audio\//i.test(file.type) && !AUDIO_EXT.test(file.name)) return rej('type');
+    if (file.size > MAX_AUDIO_BYTES) return rej('size');
+    res({ name: file.name.replace(/\.[^.]+$/, '').slice(0, 60), size: file.size });
+  });
+}
+async function attachMusic(scope, file) {
+  try {
+    const info = await readAudioFile(file);
+    const id = 'au' + uid(10);
+    await VideoStore.put(id, file);
+    const rec = { id, name: info.name, size: info.size };
+    if (scope.kind === 'profile') { ME.music = rec; saveDB(); toast('Music added to your profile.'); }
+    else {
+      const p = projectById(scope.id);
+      if (!p) return;
+      if (p.music && p.music.id) VideoStore.del(p.music.id);
+      p.music = rec; saveDB(); toast('Music added to ' + p.title + '.');
+    }
+    reload();
+  } catch (e) {
+    const m = String(e);
+    if (m === 'size') toast('That track is over 15MB. Try a shorter one.', 'err');
+    else if (m === 'type') toast('Use an MP3, M4A, WAV, OGG or FLAC file.', 'err');
+    else toast('That file could not be read.', 'err');
+  }
+}
+function removeMusic(scope) {
+  if (scope.kind === 'profile') { if (ME.music) VideoStore.del(ME.music.id); ME.music = null; saveDB(); }
+  else { const p = projectById(scope.id); if (p && p.music) { VideoStore.del(p.music.id); p.music = null; } saveDB(); }
+  toast('Music removed.', 'info'); reload();
+}
+function musicPanel(rec, scope, title) {
+  if (!rec) return '';
+  return `<div class="panel"><h2>${ic('music', 16)} ${title || 'Music'}</h2>
+    <div class="player" data-audio="${esc(rec.id)}" data-info="${esc(JSON.stringify({ name: rec.name }))}">
+      <span class="pl-load">Loading track…</span>
+    </div>
+    ${scope && scope.owner ? `<button class="btn sm danger" data-act="removemusic" data-kind="${scope.kind}" data-id="${scope.id || ''}" style="margin-top:12px">Remove track</button>` : ''}
+  </div>`;
+}
+let audioEls = [];
+function stopAllAudio() { audioEls.forEach(a => { try { a.pause(); } catch (e) {} }); audioEls = []; }
+function hydrateAudio() {
+  $$('[data-audio]').forEach(async box => {
+    if (box.dataset.ready) return;
+    box.dataset.ready = '1';
+    const id = box.dataset.audio;
+    let info = {};
+    try { info = JSON.parse(box.dataset.info || '{}'); } catch (e) {}
+    let url = blobUrls[id];
+    if (!url) { const b = await VideoStore.get(id); if (b) { url = URL.createObjectURL(b); blobUrls[id] = url; } }
+    if (!url) { box.innerHTML = '<span class="pl-gone">This track is only stored in the browser that uploaded it.</span>'; return; }
+    const a = new Audio(url);
+    a.preload = 'metadata';
+    audioEls.push(a);
+    box.innerHTML = `<button class="pl-play" aria-label="Play">${ic('play', 16, 0, true)}</button>
+      <div class="pl-mid"><b>${esc(info.name || 'Untitled track')}</b>
+        <div class="pl-bar"><i></i></div></div>
+      <span class="pl-time">0:00</span>`;
+    const btn = box.querySelector('.pl-play'), bar = box.querySelector('.pl-bar'), fill = box.querySelector('.pl-bar i'), time = box.querySelector('.pl-time');
+    const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+    const setState = playing => { btn.innerHTML = playing ? ic('pause2', 16, 0, true) : ic('play', 16, 0, true); box.classList.toggle('playing', playing); };
+    btn.onclick = () => {
+      if (a.paused) { audioEls.forEach(o => { if (o !== a) o.pause(); }); a.play().catch(() => toast('This browser blocked playback.', 'err')); }
+      else a.pause();
+    };
+    a.onplay = () => setState(true);
+    a.onpause = () => setState(false);
+    a.onended = () => { setState(false); a.currentTime = 0; };
+    a.ontimeupdate = () => {
+      const d = a.duration || 0;
+      if (fill) fill.style.width = (d ? (a.currentTime / d) * 100 : 0) + '%';
+      if (time) time.textContent = fmt(a.currentTime) + (d ? ' / ' + fmt(d) : '');
+    };
+    if (bar) bar.onclick = ev => { const r = bar.getBoundingClientRect(); if (a.duration) a.currentTime = ((ev.clientX - r.left) / r.width) * a.duration; };
+  });
+}
+
+/* ------------------------------ drag & drop ---------------------------- */
+let dropTarget = null;
+function dropScopeForRoute() {
+  const parts = parseHash().parts;
+  if (!ME) return null;
+  if (parts[0] === 'profile' && parts[1] && userByName(decodeURIComponent(parts[1])) && userByName(decodeURIComponent(parts[1])).id === ME.id) return { kind: 'profile', id: ME.id, label: 'your profile' };
+  if (parts[0] === 'project' && parts[1]) { const p = projectBySlug(parts[1]); if (p && p.creatorId === ME.id) return { kind: 'project', id: p.id, label: p.title }; }
+  if (parts[0] === 'create' && typeof cstate !== 'undefined' && cstate && cstate.category) return { kind: 'wizard', label: 'your promotion' };
+  return null;
+}
+function setupDropzone() {
+  dropTarget = dropScopeForRoute();
+  const zone = $('#dropzone');
+  if (zone) zone.remove();
+  if (!dropTarget) return;
+  const z = document.createElement('div');
+  z.id = 'dropzone'; z.className = 'dropzone';
+  z.innerHTML = `<div class="dz-inner">${ic('music', 26)}<b>Drop a music file</b><span>MP3, M4A, WAV, OGG or FLAC · up to 15MB · it will be added to ${esc(dropTarget.label)}</span></div>`;
+  document.body.appendChild(z);
+}
+function isAudioDrag(e) {
+  const dt = e.dataTransfer;
+  if (!dt) return false;
+  if (dt.types && Array.from(dt.types).includes('Files')) return true;
+  return false;
+}
+['dragenter', 'dragover'].forEach(ev => document.addEventListener(ev, e => {
+  if (!dropTarget || !isAudioDrag(e)) return;
+  e.preventDefault();
+  const z = $('#dropzone'); if (z) z.classList.add('on');
+}));
+['dragleave', 'dragend'].forEach(ev => document.addEventListener(ev, e => {
+  if (ev === 'dragleave' && e.relatedTarget) return;
+  const z = $('#dropzone'); if (z) z.classList.remove('on');
+}));
+document.addEventListener('drop', e => {
+  if (!dropTarget) return;
+  const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+  if (!f) return;
+  e.preventDefault();
+  const z = $('#dropzone'); if (z) z.classList.remove('on');
+  if (dropTarget.kind === 'wizard') addWizardMusic(f); else attachMusic(dropTarget, f);
+});
+
+/* ------------------------------ drawing tool --------------------------- */
+const DRAW_COLOURS = ['#ffffff', '#0a0a0e', '#7c6cff', '#38bdf8', '#3ddc97', '#e3b341', '#ff7a45', '#f472b6', '#94a3b8'];
+function openDraw(opts) {
+  opts = opts || {};
+  const W = opts.w || 1024, H = opts.h || 640;
+  const wrap = openModal(`<div class="mh"><h2>${ic('brush', 16)} ${esc(opts.title || 'Draw something')}</h2><button class="xbtn" data-act="closemodal">${ic('x', 16)}</button></div>
+    <div class="mb">
+      <div class="draw-tools">
+        <div class="draw-swatches">${DRAW_COLOURS.map((c, i) => `<button class="dsw ${i === 0 ? 'on' : ''}" data-act="drawcolour" data-c="${c}" style="background:${c}"></button>`).join('')}
+          <label class="dsw" style="background:conic-gradient(#ff7a45,#e3b341,#3ddc97,#38bdf8,#7c6cff,#f472b6,#ff7a45);position:relative;cursor:pointer">
+            <input type="color" value="#7c6cff" data-act="drawcustom" style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%">
+          </label></div>
+        <div class="draw-sizes">${[4, 10, 20, 38].map((s, i) => `<button class="dsz ${i === 1 ? 'on' : ''}" data-act="drawsize" data-s="${s}"><span style="width:${Math.min(22, s)}px;height:${Math.min(22, s)}px"></span></button>`).join('')}</div>
+        <button class="btn sm" data-act="drawundo">${ic('restore', 13)} Undo</button>
+        <button class="btn sm" data-act="drawerase">Eraser</button>
+        <button class="btn sm" data-act="drawclear">Clear</button>
+      </div>
+      <div class="draw-wrap"><canvas id="draw-canvas" width="${W}" height="${H}"></canvas></div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap">
+        <button class="btn ghost" data-act="closemodal">Cancel</button>
+        <button class="btn primary" data-act="drawsave" data-target="${esc(opts.target || 'cover')}">${ic('check', 15)} Use it</button>
+      </div>
+    </div>`, { size: 'xl' });
+  const cv = wrap.querySelector('#draw-canvas');
+  const ctx = cv.getContext('2d');
+  ctx.fillStyle = opts.bg || '#101017';
+  ctx.fillRect(0, 0, W, H);
+  ctx.lineJoin = ctx.lineCap = 'round';
+  const D = { ctx, cv, W, H, colour: '#ffffff', size: 10, erase: false, drawing: false, undo: [] };
+  window._draw = D;
+  const pos = e => {
+    const r = cv.getBoundingClientRect();
+    return { x: (e.clientX - r.left) * (W / r.width), y: (e.clientY - r.top) * (H / r.height) };
+  };
+  const snap = () => { D.undo.push(cv.toDataURL('image/png')); if (D.undo.length > 14) D.undo.shift(); };
+  cv.addEventListener('pointerdown', e => {
+    e.preventDefault(); cv.setPointerCapture(e.pointerId); snap();
+    D.drawing = true;
+    const p = pos(e);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.strokeStyle = D.erase ? (opts.bg || '#101017') : D.colour;
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.lineWidth = D.erase ? D.size * 2.4 : D.size;
+    ctx.beginPath(); ctx.arc(p.x, p.y, ctx.lineWidth / 2, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(p.x, p.y);
+  });
+  cv.addEventListener('pointermove', e => { if (!D.drawing) return; const p = pos(e); ctx.lineTo(p.x, p.y); ctx.stroke(); });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => cv.addEventListener(ev, () => { D.drawing = false; }));
+  return D;
+}
+function drawSave(target) {
+  const D = window._draw; if (!D) return;
+  const url = D.cv.toDataURL('image/jpeg', .86);
+  closeModal();
+  if (target === 'banner') { ME.banner = url; saveDB(); toast('Banner set from your drawing.'); reload(); return; }
+  if (target === 'shot') {
+    if (!cstate) resetCreate();
+    cstate.screenshots = cstate.screenshots || [];
+    if (cstate.screenshots.length >= 6) { toast('Six screenshots is the limit.', 'err'); return; }
+    cstate.screenshots.push(url); toast('Added to your screenshots.'); reload(); return;
+  }
+  if (!cstate) resetCreate();
+  cstate.cover = url;
+  toast('Cover set from your drawing.'); reload();
+}
+
+function musicSectionHTML() {
+  const m = cstate && cstate.music;
+  return `<div class="panel"><h2>${ic('music', 16)} Music <span style="font-weight:400;font-size:12.5px;color:var(--text-4)">optional</span></h2>
+    <p style="font-size:13.2px;color:var(--text-3);margin-bottom:14px">One track people can play while they look at your project. MP3, M4A, WAV, OGG or FLAC, up to 15MB.</p>
+    ${m ? `<div class="player" data-audio="${esc(m.id)}" data-info="${esc(JSON.stringify({ name: m.name }))}"><span class="pl-load">Loading track…</span></div>
+      <div style="display:flex;gap:9px;margin-top:12px"><button class="btn sm" data-act="pickwizardmusic">Replace</button><button class="btn sm danger" data-act="removewizardmusic">Remove</button></div>`
+    : `<div class="vid-drop" data-act="pickwizardmusic" style="cursor:pointer"><div class="vid-drop-ic">${ic('music', 22)}</div>
+        <button class="btn">${ic('plus', 14, 2)} Add a track</button><span>or drag an audio file anywhere on this page</span></div>`}
+  </div>`;
+}
+async function addWizardMusic(file) {
+  try {
+    const info = await readAudioFile(file);
+    const id = 'au' + uid(10);
+    await VideoStore.put(id, file);
+    if (!cstate) resetCreate();
+    cstate.music = { id, name: info.name, size: info.size };
+    syncCreateForm(); reload(); toast('Track added — ' + info.name + '.');
+  } catch (e) {
+    const m = String(e);
+    if (m === 'size') toast('That track is over 15MB.', 'err');
+    else if (m === 'type') toast('Use an MP3, M4A, WAV, OGG or FLAC file.', 'err');
+    else toast('That file could not be read.', 'err');
+  }
+}
+
+/* ------------------------------ banner upload -------------------------- */
+function pickBanner() {
+  pickFiles('image/png,image/jpeg,image/webp', false, async files => {
+    try { ME.banner = await readImageFile(files[0], 1800); saveDB(); toast('Banner updated.'); reload(); }
+    catch (e) { toast(e === 'size' ? 'That image is larger than 8MB.' : 'That file is not a supported image.', 'err'); }
+  });
+}
 /* ============================== CREATE FLOW ============================ */
 let cstate = null;
 function resetCreate() {
-  cstate = { category: '', tags: [], cover: null, screenshots: [], video: null, links: [], mature: false, title: '', tagline: '', desc: '', features: '', story: '', upv: '', upb: '' };
+  cstate = { category: '', tags: [], cover: null, screenshots: [], video: null, music: null, links: [], mature: false, title: '', tagline: '', desc: '', features: '', story: '', upv: '', upb: '' };
 }
 // Preserve everything the creator has typed across re-renders (tags, cover, screenshots).
 function syncCreateForm() {
@@ -5240,14 +6029,18 @@ function viewCreate(q) {
           <div style="display:flex;gap:9px;margin-top:12px;flex-wrap:wrap">
             ${cstate.cover ? `<button class="btn sm" data-act="pickcover">Replace</button><button class="btn sm danger" data-act="removecover">Remove</button>` : ''}
             <button class="btn sm outline" data-act="autocover">${ic('spark', 14)} Generate a cover for me</button>
+      <button class="btn sm outline" data-act="drawcover">${ic('brush', 14)} Draw one</button>
           </div>
           <div class="bar-line"></div>
           <h2 style="font-size:14px">Screenshots</h2>
           <p style="font-size:13px;color:var(--text-3);margin:6px 0 12px">Add up to 6. People scroll these before they read anything.</p>
           <div class="shots" id="c-shots">${cstate.screenshots.map((s, i) => `<div style="position:relative"><img src="${s}" alt="" style="cursor:default">
             <button class="qbtn" data-act="removeshot" data-i="${i}" style="position:absolute;top:6px;right:6px" title="Remove">${ic('x', 13)}</button></div>`).join('')}
-            ${cstate.screenshots.length < 6 ? `<button class="btn" data-act="pickshots" style="aspect-ratio:16/10;border-style:dashed;background:transparent">${ic('plus', 16, 2)} Add screenshots</button>` : ''}</div>
+            ${cstate.screenshots.length < 6 ? `<button class="btn" data-act="pickshots" style="aspect-ratio:16/10;border-style:dashed;background:transparent">${ic('plus', 16, 2)} Add screenshots</button>
+              <button class="btn" data-act="drawshot" style="aspect-ratio:16/10;border-style:dashed;background:transparent">${ic('brush', 16, 2)} Draw one</button>` : ''}</div>
         </div>
+
+        ${musicSectionHTML()}
 
         ${linkSectionHTML()}
 
@@ -5382,7 +6175,7 @@ function publishProject() {
   const p = {
     id, slug, title, tagline, description: desc, category: cstate.category, tags: cstate.tags.slice(),
     cover: cstate.cover || coverArt(title, Math.floor(Math.random() * 40), cstate.category.toUpperCase()),
-    screenshots: cstate.screenshots.slice(), video: cstate.video || null, features, story,
+    screenshots: cstate.screenshots.slice(), video: cstate.video || null, music: cstate.music || null, features, story,
     mature: !!cstate.mature, links: cleanLinks(cstate.links),
     creatorId: ME.id, createdAt: t, updatedAt: t, views: 0, likes: [], saves: [], hidden: false, removed: false, featured: false,
     updates: upb ? [{ version: upv || '1.0', body: upb, at: t }] : [],
@@ -5421,6 +6214,12 @@ function publishSuccess(p, firstEver) {
 
 /* ========================= LIVE PREVIEW BINDING ======================== */
 document.addEventListener('input', e => {
+  if (e.target.dataset.act === 'drawcustom') { const D = window._draw; if (D) { D.colour = e.target.value; D.erase = false; } }
+  if (e.target.id === 'arc-snipe') {
+    const v = parseInt(e.target.value, 10) || 0;
+    if (ARC.round) ARC.round.guess = v;
+    const out = document.querySelector('#arc-snipe-val'); if (out) out.textContent = fmtNum(v) + ' views';
+  }
   if (['c-title', 'c-tagline', 'c-desc'].includes(e.target.id)) {
     updatePreview();
     if (e.target.id !== 'c-desc') {
@@ -5662,7 +6461,7 @@ document.addEventListener('click', async e => {
       break;
     }
     /* ---- create flow ---- */
-    case 'catpick': cstate = { category: el.dataset.c, tags: [], cover: null, screenshots: [], video: null, links: [], mature: false, title: '', tagline: '', desc: '', features: '', story: '', upv: '', upb: '' }; reload(); break;
+    case 'catpick': cstate = { category: el.dataset.c, tags: [], cover: null, screenshots: [], video: null, music: null, links: [], mature: false, title: '', tagline: '', desc: '', features: '', story: '', upv: '', upb: '' }; reload(); break;
     case 'catreset': syncCreateForm(); resetCreate(); reload(); break;
     case 'addtag': { const i = $('#c-taginput'); addTag(i ? i.value : ''); break; }
     case 'quicktag': syncCreateForm(); addTag(el.dataset.t); break;
@@ -5761,6 +6560,38 @@ document.addEventListener('click', async e => {
       try { await navigator.clipboard.writeText(inp ? inp.value : ''); } catch (err) {}
       toast('Copied to your clipboard.'); break;
     }
+    /* ---- music, banners, pronouns, drawing ---- */
+    case 'pickwizardmusic': syncCreateForm(); pickFiles('audio/*', false, files => addWizardMusic(files[0])); break;
+    case 'removewizardmusic': { if (cstate.music) VideoStore.del(cstate.music.id); cstate.music = null; reload(); break; }
+    case 'pickmusic': {
+      const kind = el.dataset.kind, pid = el.dataset.id;
+      pickFiles('audio/*', false, files => attachMusic(kind === 'profile' ? { kind: 'profile', id: ME.id } : { kind: 'project', id: pid }, files[0]));
+      break;
+    }
+    case 'removemusic': removeMusic({ kind: el.dataset.kind, id: el.dataset.id }); break;
+    case 'setpronouns': { ME.pronouns = el.dataset.p; saveDB(); reload(); break; }
+    case 'savepronouns': {
+      const i = $('#pronouns-custom');
+      ME.pronouns = ((i ? i.value : '') || '').trim().slice(0, 24);
+      saveDB(); toast(ME.pronouns ? 'Pronouns saved.' : 'Pronouns cleared.'); reload(); break;
+    }
+    case 'pickbanner': pickBanner(); break;
+    case 'clearbanner': ME.banner = ''; saveDB(); toast('Banner removed.', 'info'); reload(); break;
+    case 'drawwide': openDraw({ w: 1200, h: 400, target: 'banner', title: 'Draw your banner' }); break;
+    case 'drawcover': openDraw({ w: 1024, h: 640, target: 'cover', title: 'Draw a cover' }); break;
+    case 'drawshot': openDraw({ w: 1024, h: 640, target: 'shot', title: 'Draw a screenshot' }); break;
+    case 'drawsave': drawSave(el.dataset.target); break;
+    case 'drawcolour': { const D = window._draw; if (!D) break; D.colour = el.dataset.c; D.erase = false; $$('.dsw').forEach(x => x.classList.toggle('on', x === el)); break; }
+    case 'drawsize': { const D = window._draw; if (!D) break; D.size = parseInt(el.dataset.s, 10); $$('.dsz').forEach(x => x.classList.toggle('on', x === el)); break; }
+    case 'drawerase': { const D = window._draw; if (!D) break; D.erase = !D.erase; toast(D.erase ? 'Eraser on.' : 'Eraser off.', 'info'); break; }
+    case 'drawclear': { const D = window._draw; if (!D) break; D.undo.push(D.cv.toDataURL()); D.ctx.fillStyle = '#101017'; D.ctx.fillRect(0, 0, D.W, D.H); break; }
+    case 'drawundo': {
+      const D = window._draw; if (!D || !D.undo.length) break;
+      const img = new Image();
+      img.onload = () => { D.ctx.clearRect(0, 0, D.W, D.H); D.ctx.drawImage(img, 0, 0); };
+      img.src = D.undo.pop();
+      break;
+    }
     /* ---- flow + arcade ---- */
     case 'scrollmode': go('/scroll'); break;
     case 'flowdown': flowStep(1); break;
@@ -5771,7 +6602,21 @@ document.addEventListener('click', async e => {
     case 'archl': arcHL(el.dataset.v); break;
     case 'archlnext': arcHLNext(); break;
     case 'arctt': arcTT(el.dataset.id); break;
-    case 'arccat': arcCat(el.dataset.c); break;
+    case 'arccat': arcChoice(el.dataset.c, null, v => ARC.round.target.category === v, 'it is ' + ARC.round.target.category); break;
+    case 'arccreator': arcChoice(el.dataset.u, null, v => ARC.round.correct.username === v, 'made by @' + ARC.round.correct.username); break;
+    case 'arctag': arcChoice(el.dataset.t, null, v => ARC.round.correct === v, 'the tag is ' + ARC.round.correct); break;
+    case 'arcblur': arcChoice(el.dataset.c, null, v => ARC.round.target.category === v, 'it is ' + ARC.round.target.category); break;
+    case 'arcblurmore': ARC.round.stage = Math.min(3, ARC.round.stage + 1); reload(); break;
+    case 'arcscramble': arcScramble(); break;
+    case 'arcmem': arcMem(parseInt(el.dataset.i, 10)); break;
+    case 'arcfake': arcFake(el.dataset.t); break;
+    case 'arcsnipe': arcSnipe(); break;
+    case 'arcttt': arcTTTMove(parseInt(el.dataset.i, 10)); break;
+    case 'arc2048': arc2048(el.dataset.d); break;
+    case 'arcsnake': arcSnakeDir(el.dataset.d); break;
+    case 'arcmine': arcMine(parseInt(el.dataset.i, 10)); break;
+    case 'arcflag': { ARC.round.flagMode = !ARC.round.flagMode; reload(); break; }
+    case 'arcfrenzy': arcFrenzy(parseInt(el.dataset.i, 10)); break;
     case 'arcnext': arcNext(); break;
     /* ---- mature content, project links, site theme ---- */
     case 'reveal': revealMature(el.dataset.id); reload(); break;
